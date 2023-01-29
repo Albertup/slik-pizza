@@ -6,7 +6,10 @@ import PizzaBox from "./../assets/img/slik-pizza.webp";
 const ServiceContainer = () => {
   const {t} = useContext(MyContext);
   return (
-    <section id="service" className='w-full h-screen grid grid-cols-1 lg:grid-cols-2 gap-8 pizza-box  bg-contain bg-no-repeat bg-right bg-opacity-0 lg:bg-opacity-100' style={{backgroundImage: `url(${PizzaBox})`}}>
+    <section id="service" className='mt-24 lg:mt-40 w-full h-screen grid grid-cols-1 lg:grid-cols-2 gap-8 pizza-box  bg-contain bg-no-repeat bg-right bg-opacity-0 lg:bg-opacity-100' style={{backgroundImage: `url(${PizzaBox})`}}>
+      
+      
+      
       <div className="w-full px-4 lg:px-16 py-4 mt-24 lg:mt-40 flex flex-col items-center justify-center">
         
         <div className='py-2  flex-1 flex flex-col items-start justify-center gap-12'>

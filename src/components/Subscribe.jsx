@@ -84,7 +84,7 @@ const Subscribe = () => {
       <div className='w-[90%] lg:w-[75%] border border-gray-300 rounded-lg mt-4 pl-4 p-2 flex flex-col lg:flex-row items-center justify-center gap-4'>
         
         <div className='w-full py-2 border-gray-300 flex items-center gap-2'>
-          <MdOutlineAlternateEmail className='text-xl text-gray-700'/>
+          <MdOutlineAlternateEmail className='text-xl text-primary'/>
           <input type='text' 
           required value={email} 
           onChange={(e) => setEmail(e.target.value)}
@@ -93,12 +93,12 @@ const Subscribe = () => {
         </div>
 
         <div className="flex items-center w-full lg:w-[25%]">
-          <button
+          <motion.button whileTap={{ scale: 0.9 }} 
             type="button"
-            className="ml-0 md:ml-auto w-full md:w-auto  border border-gray-300 px-12 py-2 rounded-lg text-lg text-white font-semibold"
+            className="ml-0 md:ml-auto w-full md:w-auto border-2 border-gray-300 px-12 py-2 rounded-lg text-lg text-white font-semibold"
             onClick={saveDetails}>
             {t('SendUp')}
-          </button>
+          </motion.button>
         </div>
 
       </div>

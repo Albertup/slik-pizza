@@ -1,58 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import { motion } from 'framer-motion';
-import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
-import RowContainer from './RowContainer';
 import { useStateValue } from '../context/StateProvider';
 import MenuContainer from './MenuContainer';
 import HomeContainer from './HomeContainer';
 import CartContainer from './CartContainer';
 import AboutContainer from './AboutContainer';
 import ServiceContainer from './ServiceContainer';
+import NewMain from './NewMain';
+import HotDishes from './HotDishes';
+import FreshHealthy from './FreshHealthy';
 
 const MainContainer = () => {
 
-  const [{ foodItems, cartShow }, dispatch] = useStateValue();
-  const [scrollValue, setScrollValue] = useState(0);
+  const [{ cartShow }, dispatch] = useStateValue();
 
-  useEffect(() => {}, [scrollValue, cartShow]);
+  useEffect(() => {}, [cartShow]);
 
   return (
-    <div className='w-full h-auto flex flex-col items-center justify-center'>
+    <section className='w-full h-auto flex flex-col items-center justify-center'>
       <HomeContainer/>
-      <section className="w-full my-6 px-4 lg:px-16 py-4">
-        <div className="w-full flex items-center justify-between">
-          <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-gray-400 to-gray-600 transition-all ease-in-out duration-100">
-            Our fresh & healthy fruits
-          </p>
-
-          <div className="hidden lg:flex gap-3 items-center">
-            <motion.div
-              whileTap={{ scale: 0.75 }}
-              className="w-8 h-8 rounded-lg bg-gray-300 hover:bg-gray-500 cursor-pointer  hover:shadow-lg flex items-center justify-center"
-              onClick={() => setScrollValue(-1600)}
-            >
-              <MdChevronLeft className="text-lg text-white" />
-            </motion.div>
-            <motion.div
-              whileTap={{ scale: 0.75 }}
-              className="w-8 h-8 rounded-lg bg-gray-300 hover:bg-gray-500 cursor-pointer transition-all duration-100 ease-in-out hover:shadow-lg flex items-center justify-center"
-              onClick={() => setScrollValue(1600)}
-            >
-              <MdChevronRight className="text-lg text-white" />
-            </motion.div>
-          </div>
-        </div>
-        <RowContainer
-          scrollValue={scrollValue}
-          flag={true}
-          data={foodItems?.filter((n) => n.category === "frutti")}
-        />
-      </section>
+      <HotDishes/>
       <MenuContainer />
+      <FreshHealthy/>
       {cartShow && <CartContainer />}
       <AboutContainer/>
       <ServiceContainer/>
-    </div>
+    </section>
   )
 }
 

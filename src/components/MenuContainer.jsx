@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { IoFastFood } from "react-icons/io5";
 import { categories } from "../utils/data";
 import { motion } from "framer-motion";
@@ -11,9 +11,10 @@ const MenuContainer = () => {
   const [{ foodItems }, dispatch] = useStateValue();
 
   return (
-    <section id='menu' className="w-full my-6 px-4 lg:px-16 py-4">
-      <div className="w-full mt-24 lg:mt-40 flex flex-col items-center justify-center">
-        <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-16 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-gray-400 to-gray-600 transition-all ease-in-out duration-100 mr-auto">
+    <section id='menu' className="w-full my-6 px-4 lg:px-16 py-4" style={{maxWidth: "1920px"}}>
+    <div className="lg:container mx-auto px-4">
+      <div className="w-full mt-10 lg:mt-20 flex flex-col items-center justify-center">
+        <p className="text-2xl font-Bebas tracking-widest font-bold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-gray-400 to-gray-600 transition-all ease-in-out duration-100 mr-auto">
           Our Hot Dishes
         </p>
 
@@ -59,9 +60,10 @@ const MenuContainer = () => {
         <div className="w-full">
           <RowContainer
             flag={false}
-            data={foodItems?.filter((n) => n.category == filter)}
+            data={foodItems?.filter((n) => n.category === filter)}
           />
         </div>
+      </div>
       </div>
     </section>
   );

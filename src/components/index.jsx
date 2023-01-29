@@ -9,3 +9,6 @@ export { default as ServiceContainer } from './ServiceContainer';
 export { default as Loader } from './Loader';
 export { default as RowContainer } from "./RowContainer";
 export { default as CartContainer } from "./CartContainer";
+export { default as HotDishes } from "./HotDishes";
+export { default as FreshHealthy } from "./FreshHealthy";
+export { default as ScrollToTop } from "./ScrollToTop";

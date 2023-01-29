@@ -8,6 +8,9 @@ import { useStateValue } from './context/StateProvider';
 import { getAllFoodItems } from './utils/firebaseFunctions';
 import { actionType } from './context/reducer';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+
+
 
 function App() {
   const {t,i18n} = useTranslation(['translation'])
@@ -32,15 +35,16 @@ function App() {
   return (
     <MyContext.Provider value={{t, changeLanguaje}}>
   <AnimatePresence mode='wait'>
-    <div className="w-screen h-auto flex flex-col bg-primary">
+    <div id="home" className="w-screen h-auto flex flex-col bg-primary">
       <Header/>
-      <main className='mt-24 lg:mt-40 w-full'>
+      <main className='mt-10 lg:mt-20 w-full' >
         <Routes>
           <Route path='/*' element={<MainContainer/>}/>
           <Route path='/createItem' element={<CreateContainer/>}/>
         </Routes>
       </main>
       <Footer/>
+      <ScrollToTop/>
     </div>
   </AnimatePresence>
   </MyContext.Provider>

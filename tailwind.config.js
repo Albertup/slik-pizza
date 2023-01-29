@@ -3,7 +3,7 @@
 
 
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html", 'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       
@@ -67,5 +67,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [
+    require("tailwind-scrollbar"),
+    require('flowbite/plugin')
+  ],
 }

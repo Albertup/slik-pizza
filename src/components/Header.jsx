@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { MdShoppingBasket, MdAdd, MdLogout, MdHome, MdRestaurantMenu, MdInfo, MdDeliveryDining, MdLanguage } from 'react-icons/md';
 import { FaPizzaSlice } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-
+import PizzaFlat from "./../assets/img/pizza-flat.webp";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from '../firebase.config';
 
@@ -26,6 +26,18 @@ const Header = () => {
   const [isMenu, setIsMenu] = useState(false)
 
   const [isMdMenu, setIsMdMenu] = useState(false)
+
+  const [top, setTop] = useState(true);
+
+  // detect whether user has scrolled the page down by 10px 
+  useEffect(() => {
+    const scrollHandler = () => {
+      window.pageYOffset > 10 ? setTop(false) : setTop(true)
+    };
+    window.addEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, [top]);  
+
 
   const mdMenu = () => {
     setIsMdMenu(!isMdMenu);
@@ -67,21 +79,21 @@ const Header = () => {
 
   return (
     <>
-    <header className="fixed  z-50 lg:h-40 w-full p-3 px-3 lg:p-6 lg:px-16 bg-primary">
+    <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-lg'}`}>
 
       {/*desktop & tablet*/}
-      <div className='hidden lg:flex w-full h-full items-center justify-between'>
+      <div className='hidden lg:flex w-full h-full items-center justify-between pr-6 pl-6'>
         <Link to={'/'} className='flex items-center gap-1'>
-          <img className='w-52 object-cover' src={Logo} alt="Logo"></img>
+          <motion.img initial={{opacity: 0, x: 600}} animate={{opacity: 1, x: 0}} exit={{opacity: 0, x: 600}} className={`w-64 p-4 object-cover ${!top && 'p-2 w-44'} `} src={Logo} alt="Logo"></motion.img>
         </Link>
         <div className=' flex items-center gap-8'>
           <motion.ul initial={{opacity: 0, x: 200}} animate={{opacity: 1, x: 0}} exit={{opacity: 0, x: 200}} className=' flex items-center gap-8'>
-            <li ><a href="/#home" className='font-Staatliches tracking-widest text-[1.5rem] text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>{t('Home')} </a></li>
-            <li ><a href="/#menu" className='font-Staatliches tracking-widest text-[1.5rem] text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>{t('Menu')} </a></li>
-            <li ><a href="/#about" className='font-Staatliches tracking-widest text-[1.5rem] text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>{t('About')} </a></li>
-            <li ><a href="/#service" className='font-Staatliches tracking-widest text-[1.5rem] text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>{t('Service')} </a></li>
-            <li className='font-Staatliches tracking-widest text-[1.5rem] text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>
-            <span className='font-Staatliches tracking-widest text-[1.5rem] text-base' onClick={()=>changeLanguaje('en')}>EN</span>/<span className='font-Staatliches tracking-widest text-[1.5rem] text-base' onClick={()=>changeLanguaje('es')}>ES</span></li>
+            <li ><a href="/#home" className='font-Staatliches tracking-widest text-[1.2rem] text-base text-textColor hover:text-gray-700 duration-100 transition-all ease-in-out cursor-pointer hover:border-b-2 hover:border-gray-700'>{t('Home')} </a></li>
+            <li ><a href="/#menu" className='font-Staatliches tracking-widest text-[1.2rem] text-base text-textColor hover:text-gray-700 duration-100 transition-all ease-in-out cursor-pointer hover:border-b-2 hover:border-gray-700'>{t('Menu')} </a></li>
+            <li ><a href="/#about" className='font-Staatliches tracking-widest text-[1.2rem] text-base text-textColor hover:text-gray-700 duration-100 transition-all ease-in-out cursor-pointer hover:border-b-2 hover:border-gray-700'>{t('About')} </a></li>
+            <li ><a href="/#service" className='font-Staatliches tracking-widest text-[1.2rem] text-base text-textColor hover:text-gray-700 duration-100 transition-all ease-in-out cursor-pointer hover:border-b-2 hover:border-gray-700'>{t('Service')} </a></li>
+            <li className='font-Staatliches tracking-widest text-[1.2rem] text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>
+            <span className='font-Staatliches tracking-widest text-[1.2rem] text-base text-textColor hover:text-gray-700 duration-100 transition-all ease-in-out cursor-pointer hover:border-b-2 hover:border-gray-700' onClick={()=>changeLanguaje('en')}>EN</span>/<span className='font-Staatliches tracking-widest text-[1.2rem] text-base text-textColor hover:text-gray-700 duration-100 transition-all ease-in-out cursor-pointer hover:border-b-2 hover:border-gray-700' onClick={()=>changeLanguaje('es')}>ES</span></li>
           </motion.ul>
           <div className='realtive flex items-center justify-center' onClick={showCart}>
             <MdShoppingBasket className='text-textColor text-3xl cursor-pointer'/>
@@ -116,14 +128,14 @@ const Header = () => {
       </div>
 
       {/*mobile*/}
-      <div className='flex items-center justify-between lg:hidden w-full h-full'>
+      <div className='flex items-center justify-between lg:hidden w-full h-full p-4'>
         <Link to={'/'} className='flex items-center gap-1'>
           <img className='w-32 object-cover' src={Logo} alt="Logo"></img>
         </Link>
-        <div className=' flex items-center gap-10'>
+        <div className=' flex items-center gap-6'>
           <div className='relative'>  
             <motion.div whileTap={{scale: 0.6}} onClick={mdMenu} >
-              <FaPizzaSlice className=' text-textColor text-4xl cursor-pointer rotate-12'/>
+              <img src={PizzaFlat} alt="" className='bg-textColor drop-shadow-xl rounded-full text-textColor text-4xl cursor-pointer rotate-12 w-10 min-w-[40px] h-10 min-h-[40px]'/>
             </motion.div>
             {
               isMdMenu && (
