@@ -1,14 +1,14 @@
-import I01 from "../assets/img/i1.png";
-import F01 from "../assets/img/f1.png";
-import C03 from "../assets/img/c3.png";
-import Fi01 from "../assets/img/fi1.png";
+import P005 from "../assets/img/p-005.webp";
+import PA006 from "../assets/img/pa-006.webp";
+import S002 from "../assets/img/S-002.webp";
+import F001 from "../assets/img/f-001.webp";
 
 
 export const heropData = [
-    {id : 1, name : 'Cioccolato', decp : 'Gelati', price : '5.50', imageSrc : I01},
-    {id : 2, name : 'Fragole', decp : 'Frutti', price : '10.95', imageSrc : F01},
-    {id : 3, name : 'Napolitana', decp : 'Pizze', price : '8.25', imageSrc : C03},
-    {id : 4, name : 'Carbonara', decp : 'Pasta', price : '7.95', imageSrc : Fi01},
+    {id : 1, name : 'Napolitana', decp : 'Pizze', price : '11.20', imageSrc : P005},
+    {id : 2, name : 'Fritatine', decp : 'Pasta', price : '10.20', imageSrc : PA006},
+    {id : 3, name : 'Luna Rossa', decp : 'Insalate', price : '7.95', imageSrc : S002},
+    {id : 4, name : 'Fragole', decp : 'Frutti', price : '5.50', imageSrc : F001},
 ];
 
 export const categories = [

@@ -35,75 +35,57 @@ const Footer = () => {
 
     
 
-    <div class="grid lg:grid-cols-4 grid-cols-2">
-      <div class="mb-6 flex flex-col items-center justify-center">
-
-        <ul class="list-none mb-0">
+    <div class="grid mt-10 lg:grid-cols-3 grid-cols-3">
+      <div class="mb-6 flex flex-col text-center items-center justify-center">
+      <h5 class="text-white text-[22px] text-center font-Bebas tracking-widest border-spacing-2 border-b-2 border-primary">{t('Menu')}</h5>
+        <ul class="list-none mb-0 mt-2">
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 1</a>
+            <a href="/#home" class="text-white">{t('Home')}</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 2</a>
+            <a href="/#menu" class="text-white">{t('Menu')}</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 3</a>
+            <a href="/#about" class="text-white">{t('About')}</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 4</a>
-          </motion.li>
-        </ul>
-      </div>
-
-      <div class="mb-6 flex flex-col items-center justify-center">
-
-        <ul class="list-none mb-0">
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 1</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 2</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 3</a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 4</a>
+            <a href="/#service" class="text-white">{t('Service')}</a>
           </motion.li>
         </ul>
       </div>
 
-      <div class="mb-6 flex flex-col items-center justify-center">
-
-        <ul class="list-none mb-0">
+      <div class="mb-6 flex flex-col text-center items-center justify-center">
+        <h5 class="text-white text-[22px] text-center font-Bebas tracking-widest border-spacing-2 border-b-2 border-primary">SOCIAL</h5>
+        <ul class="list-none mb-0 mt-2">
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 1</a>
+            <a href="https://www.linkedin.com/in/albertup" class="text-white">LinkedIn</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 2</a>
+            <a href="http://twitter.com/Albertupgrade" class="text-white">Twitter</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 3</a>
+            <a href="http://codepen.io/albertup" class="text-white">CodePen</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 4</a>
+            <a href="http://github.com/albertup" class="text-white">Github</a>
           </motion.li>
         </ul>
       </div>
-
-      <div class="mb-6 flex flex-col items-center justify-center">
-
-        <ul class="list-none mb-0">
+      
+      <div class="mb-6 flex flex-col text-center items-center justify-center">
+      <h5 class="text-white text-[22px] text-center font-Bebas tracking-widest border-spacing-2 border-b-2 border-primary">Legal</h5>
+        <ul class="list-none mb-0 mt-2">
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 1</a>
+            <a href="#!" class="text-white">Legal</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 2</a>
+            <a href="#!" class="text-white">Service</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 3</a>
+            <a href="#!" class="text-white">Privacy</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Link 4</a>
+            <a href="#!" class="text-white">Terms</a>
           </motion.li>
         </ul>
       </div>
@@ -112,7 +94,7 @@ const Footer = () => {
   <div className='w-[80%] py-4 border-b border-gray-300 flex items-center gap-2'></div>
         <div className='w-full mt-2 flex flex-row'>
             <span className='w-full text-center block text-sm pb-6 text-zinc-300'>&copy; {new Date().getFullYear()}. All Rights Reserved.</span>
-            <span className='w-full text-center block text-sm pb-6 text-zinc-300'>Made with &hearts; by &nbsp;<a href="http://google.com" target="_blank" rel="noreferrer">AGDsigns</a></span>
+            <span className='w-full text-center block text-sm pb-6 text-zinc-300'>Made with &hearts; by &nbsp;<a href="https://personal-portfolio-zeta-one.vercel.app/" target="_blank" rel="noreferrer">AGDsigns</a></span>
         </div>
         
     </div>

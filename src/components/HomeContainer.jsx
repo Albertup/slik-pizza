@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { MyContext } from '../context/MyContext';
-import Delivery from "../assets/svg/delivery-black.svg";
 import { MdDeliveryDining, MdLocalPizza, MdRestaurant } from 'react-icons/md';
 import bgSlick from "./../assets/img/pizza-slick-main.webp";
 import frontPizza from "./../assets/img/pizza-home.webp";

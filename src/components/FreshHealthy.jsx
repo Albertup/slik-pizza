@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { motion } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import RowContainer from './RowContainer';
 import { useStateValue } from '../context/StateProvider';
+import { MyContext } from '../context/MyContext';
 
 const FreshHealthy = () => {
-
+  const {t} = useContext(MyContext);
     const [{ foodItems }, dispatch] = useStateValue();
     const [scrollValue, setScrollValue] = useState(0);
   
@@ -16,8 +17,8 @@ const FreshHealthy = () => {
     <section className="w-full my-6 px-4 lg:px-16 py-4 pt-20 pb-48" style={{maxWidth: "1920px"}}>
     <div className="lg:container mx-auto px-4">
       <div className="w-full flex items-center justify-between">
-        <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-gray-400 to-gray-600 transition-all ease-in-out duration-100">
-           Our fresh & healthy fruits
+        <p className="text-2xl font-Bebas tracking-widest font-bold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-gray-400 to-gray-600 transition-all ease-in-out duration-100">
+        {t('Fresh')}
         </p>
 
         <div className="hidden lg:flex gap-3 items-center">

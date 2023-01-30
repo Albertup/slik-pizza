@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useStateValue } from '../context/StateProvider';
 import MenuContainer from './MenuContainer';
 import HomeContainer from './HomeContainer';
 import CartContainer from './CartContainer';
 import AboutContainer from './AboutContainer';
 import ServiceContainer from './ServiceContainer';
-import NewMain from './NewMain';
 import HotDishes from './HotDishes';
 import FreshHealthy from './FreshHealthy';
 

@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IoFastFood } from "react-icons/io5";
 import { categories } from "../utils/data";
 import { motion } from "framer-motion";
 import RowContainer from "./RowContainer";
 import { useStateValue } from "../context/StateProvider";
+import { MyContext } from "../context/MyContext";
 
 const MenuContainer = () => {
+  const {t} = useContext(MyContext);
   const [filter, setFilter] = useState("chicken");
 
   const [{ foodItems }, dispatch] = useStateValue();
@@ -15,7 +17,7 @@ const MenuContainer = () => {
     <div className="lg:container mx-auto px-4">
       <div className="w-full mt-10 lg:mt-20 flex flex-col items-center justify-center">
         <p className="text-2xl font-Bebas tracking-widest font-bold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-gray-400 to-gray-600 transition-all ease-in-out duration-100 mr-auto">
-          Our Hot Dishes
+        {t('HotDish')}
         </p>
 
         <div className="w-full flex items-center justify-start lg:justify-center gap-8 py-6 overflow-x-scroll scrollbar-none">

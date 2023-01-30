@@ -1,11 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { MdShoppingBasket } from "react-icons/md";
 import { motion } from "framer-motion";
 import NotFound from "../assets/svg/NotFound.svg";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
+import { MyContext } from "../context/MyContext";
 
 const RowContainer = ({ flag, data, scrollValue }) => {
+  const {t} = useContext(MyContext);
   const rowContainer = useRef();
 
   const [items, setItems] = useState([]);
@@ -13,6 +15,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
   const [{ cartItems }, dispatch] = useStateValue();
 
   const addtocart = () => {
+    
     dispatch({
       type: actionType.SET_CARTITEMS,
       cartItems: items,
@@ -68,7 +71,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
                 {item?.title}
               </p>
               <p className="mt-1 text-sm text-gray-500">
-                {item?.calories} Calories
+                {item?.calories} {t('Calories')}
               </p>
               <div className="flex items-center gap-8">
                 <p className="text-lg text-headingColor font-semibold">
@@ -80,9 +83,9 @@ const RowContainer = ({ flag, data, scrollValue }) => {
         ))
       ) : (
         <div className="w-full flex flex-col items-center justify-center">
-          <img src={NotFound} className="h-340" />
-          <p className="text-xl text-headingColor font-semibold my-2">
-            Items Not Available
+          <img src={NotFound} className="h-340" alt="/"/>
+          <p className="text-2xl font-Bebas tracking-widest text-headingColor font-semibold my-2">
+          {t('ItemsNot')}
           </p>
         </div>
       )}
