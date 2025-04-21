@@ -16,76 +16,76 @@ const Footer = () => {
         
         
 
-    <div class="container px-6 pt-6">
-    <div class="flex justify-center mb-6">
-      <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href='https://www.linkedin.com/in/albertup' target="_blank" type="button" class="flex items-center justify-center rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-12 h-12 m-2 text-[150%]">
+    <div className="container px-6 pt-6">
+    <div className="flex justify-center mb-6">
+      <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href='https://www.linkedin.com/in/albertup' target="_blank" type="button" className="flex items-center justify-center rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-12 h-12 m-2 text-[150%]">
         <FaLinkedinIn/>
       </motion.a>
-      <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href='http://twitter.com/Albertupgrade' target="_blank" type="button" class="flex items-center justify-center rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-12 h-12 m-2 text-[150%]">
+      <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href='http://twitter.com/Albertupgrade' target="_blank" type="button" className="flex items-center justify-center rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-12 h-12 m-2 text-[150%]">
         <FaTwitter/>
       </motion.a>
-      <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href='http://codepen.io/albertup' target="_blank" type="button" class="flex items-center justify-center rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-12 h-12 m-2 text-[150%]">
+      <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href='http://codepen.io/albertup' target="_blank" type="button" className="flex items-center justify-center rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-12 h-12 m-2 text-[150%]">
         <FaCodepen/>
       </motion.a>
 
-      <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href='http://github.com/albertup' target="_blank" type="button" class="flex items-center justify-center rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-12 h-12 m-2 text-[150%]">
+      <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href='http://github.com/albertup' target="_blank" type="button" className="flex items-center justify-center rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-12 h-12 m-2 text-[150%]">
         <FaGithub/>
       </motion.a>
     </div>
 
     
 
-    <div class="grid mt-10 lg:grid-cols-3 grid-cols-3">
-      <div class="mb-6 flex flex-col text-center items-center justify-center">
-      <h5 class="text-white text-[22px] text-center font-Bebas tracking-widest border-spacing-2 border-b-2 border-primary">{t('Menu')}</h5>
-        <ul class="list-none mb-0 mt-2">
+    <div className="grid mt-10 lg:grid-cols-3 grid-cols-3">
+      <div className="mb-6 flex flex-col text-center items-center justify-center">
+      <h5 className="text-white text-[22px] text-center font-Bebas tracking-widest border-spacing-2 border-b-2 border-primary">{t('Menu')}</h5>
+        <ul className="list-none mb-0 mt-2">
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="/#home" class="text-white">{t('Home')}</a>
+            <a href="/#home" className="text-white">{t('Home')}</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="/#menu" class="text-white">{t('Menu')}</a>
+            <a href="/#menu" className="text-white">{t('Menu')}</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="/#about" class="text-white">{t('About')}</a>
+            <a href="/#about" className="text-white">{t('About')}</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="/#service" class="text-white">{t('Service')}</a>
+            <a href="/#service" className="text-white">{t('Service')}</a>
           </motion.li>
         </ul>
       </div>
 
-      <div class="mb-6 flex flex-col text-center items-center justify-center">
-        <h5 class="text-white text-[22px] text-center font-Bebas tracking-widest border-spacing-2 border-b-2 border-primary">SOCIAL</h5>
-        <ul class="list-none mb-0 mt-2">
+      <div className="mb-6 flex flex-col text-center items-center justify-center">
+        <h5 className="text-white text-[22px] text-center font-Bebas tracking-widest border-spacing-2 border-b-2 border-primary">SOCIAL</h5>
+        <ul className="list-none mb-0 mt-2">
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="https://www.linkedin.com/in/albertup" class="text-white">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/albertup" className="text-white">LinkedIn</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="http://twitter.com/Albertupgrade" class="text-white">Twitter</a>
+            <a href="http://twitter.com/Albertupgrade" className="text-white">Twitter</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="http://codepen.io/albertup" class="text-white">CodePen</a>
+            <a href="http://codepen.io/albertup" className="text-white">CodePen</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="http://github.com/albertup" class="text-white">Github</a>
+            <a href="http://github.com/albertup" className="text-white">Github</a>
           </motion.li>
         </ul>
       </div>
       
-      <div class="mb-6 flex flex-col text-center items-center justify-center">
-      <h5 class="text-white text-[22px] text-center font-Bebas tracking-widest border-spacing-2 border-b-2 border-primary">Legal</h5>
-        <ul class="list-none mb-0 mt-2">
+      <div className="mb-6 flex flex-col text-center items-center justify-center">
+      <h5 className="text-white text-[22px] text-center font-Bebas tracking-widest border-spacing-2 border-b-2 border-primary">Legal</h5>
+        <ul className="list-none mb-0 mt-2">
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Legal</a>
+            <a href="#!" className="text-white">Legal</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Service</a>
+            <a href="#!" className="text-white">Service</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Privacy</a>
+            <a href="#!" className="text-white">Privacy</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a href="#!" class="text-white">Terms</a>
+            <a href="#!" className="text-white">Terms</a>
           </motion.li>
         </ul>
       </div>

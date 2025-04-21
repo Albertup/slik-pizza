@@ -34,8 +34,8 @@ const ServiceContainer = () => {
               </div>
               <div className="w-full md:w-6/12 ml-auto mr-auto">
                 <div className="lg:pr-2">
-                <div class="flex flex-wrap">
-              <div class="flex flex-wrap">
+                <div className="flex flex-wrap">
+              <div className="flex flex-wrap">
 
                   <div className="w-full"><img src={PizzaBox} alt='pizzabox'/></div>
                 </div>

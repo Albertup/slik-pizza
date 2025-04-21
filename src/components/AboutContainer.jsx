@@ -57,15 +57,15 @@ const AboutContainer = () => {
               </div>
               <div className="w-full md:w-6/12 ml-auto mr-auto">
                 <div className="lg:pr-2">
-                <div class="flex flex-wrap">
-              <div class="flex flex-wrap w-1/2">
-
-                <motion.div class="w-1/2 p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O001} onClick={() => setShowModal001(true)}/>
-                </motion.div>
+                <div className="flex flex-wrap">
+              <div className="flex flex-wrap w-1/2">
+          
+                <motion.div className="w-1/2 p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                  <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O001} onClick={() => setShowModal001(true)}/>
+                </motion.div> 
                 {showModal001 ? (
                 <>
-                  <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+                  <div className=" justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
                     <div className="relative w-auto my-6 mx-auto max-w-3xl">
                       {/*content*/}
                       <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -81,17 +81,17 @@ const AboutContainer = () => {
                         </div>
                         {/*body*/}
                         <div className="relative p-6 flex-auto">
-                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm" src={O001} />
+                          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm" src={O001} />
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="opacity-40 fixed inset-0 z-40 bg-black"></div>
-                </>
+                </> 
                 ) : null}
 
-                <motion.div class="w-1/2 p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O002} onClick={() => setShowModal002(true)}/>
+                <motion.div className="w-1/2 p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                  <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O002} onClick={() => setShowModal002(true)}/>
                 </motion.div>
 
                 {showModal002 ? (
@@ -112,7 +112,7 @@ const AboutContainer = () => {
                         </div>
                         {/*body*/}
                         <div className="relative p-6 flex-auto">
-                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm" src={O002} />
+                          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm" src={O002} />
                         </div>
                       </div>
                     </div>
@@ -120,9 +120,9 @@ const AboutContainer = () => {
                   <div className="opacity-40 fixed inset-0 z-40 bg-black"></div>
                 </>
                 ) : null}
-
-                <motion.div class="w-full p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O003} onClick={() => setShowModal003(true)}/>
+  
+                <motion.div className="w-full p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                  <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O003} onClick={() => setShowModal003(true)}/>
                 </motion.div>
 
                 {showModal003 ? (
@@ -143,19 +143,19 @@ const AboutContainer = () => {
                         </div>
                         {/*body*/}
                         <div className="relative p-6 flex-auto">
-                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm" src={O003} />
+                          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm" src={O003} />
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="opacity-40 fixed inset-0 z-40 bg-black"></div>
                 </>
-                ) : null}  
-
+                ) : null}
+                
               </div>
-              <div class="flex flex-wrap w-1/2">
-                <motion.div class="w-full p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm  cursor-pointer" src={O004} onClick={() => setShowModal004(true)}/>
+              <div className="flex flex-wrap w-1/2">
+                <motion.div className="w-full p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                  <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm  cursor-pointer" src={O004} onClick={() => setShowModal004(true)}/>
                 </motion.div>
 
                 {showModal004 ? (
@@ -176,17 +176,17 @@ const AboutContainer = () => {
                         </div>
                         {/*body*/}
                         <div className="relative p-6 flex-auto">
-                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm" src={O004} />
+                          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm" src={O004} />
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="opacity-40 fixed inset-0 z-40 bg-black"></div>
                 </>
-                ) : null}  
+                ) : null}
 
-                <motion.div class="w-1/2 p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O005} onClick={() => setShowModal005(true)}/>
+                <motion.div className="w-1/2 p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                    <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O005} onClick={() => setShowModal005(true)}/>
                 </motion.div>
 
                 {showModal005 ? (
@@ -207,7 +207,7 @@ const AboutContainer = () => {
                         </div>
                         {/*body*/}
                         <div className="relative p-6 flex-auto">
-                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm" src={O005} />
+                          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm" src={O005} />
                         </div>
                       </div>
                     </div>
@@ -216,8 +216,8 @@ const AboutContainer = () => {
                 </>
                 ) : null}
 
-                <motion.div class="w-1/2 p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O006} onClick={() => setShowModal006(true)}/>
+                <motion.div className="w-1/2 p-1 md:p-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                  <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm cursor-pointer" src={O006} onClick={() => setShowModal006(true)}/>
                 </motion.div>
 
                 {showModal006 ? (
@@ -238,7 +238,7 @@ const AboutContainer = () => {
                         </div>
                         {/*body*/}
                         <div className="relative p-6 flex-auto">
-                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-sm" src={O006} />
+                          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-sm" src={O006} />
                         </div>
                       </div>
                     </div>
@@ -246,7 +246,7 @@ const AboutContainer = () => {
                   <div className="opacity-40 fixed inset-0 z-40 bg-black"></div>
                 </>
                 ) : null}  
-
+                
                 </div>
             </div>
             
